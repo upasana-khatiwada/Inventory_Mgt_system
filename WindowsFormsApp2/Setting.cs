@@ -16,7 +16,6 @@ namespace WindowsFormsApp2
         public Setting()
         {
             InitializeComponent();
-
             button1.BackColor = System.Drawing.Color.Transparent;
             button1.Parent = pictureBox1;
             button1.FlatStyle = FlatStyle.Flat;
@@ -28,27 +27,21 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+
+
             this.Hide();
-            Form3 Setting = new Form3();
+            Form1 Setting = new Form1();
             Setting.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 Setting = new Form1();
+            Form3 Setting = new Form3();
             Setting.ShowDialog();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
+
 

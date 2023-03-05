@@ -93,7 +93,9 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form3 LowStock = new Form3();
+            LowStock.ShowDialog();
 
         }
 
@@ -123,12 +125,10 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form3 LowStock = new Form3();
-            LowStock.ShowDialog();
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+           
+        //}
 
         private void button2_Click(object sender, EventArgs e)
         {

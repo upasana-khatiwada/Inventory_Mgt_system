@@ -73,5 +73,10 @@ namespace WindowsFormsApp2
             ProductIn listboxForProductIn = new ProductIn();
             listboxForProductIn.ShowDialog();
         }
+
+        private void button1_click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

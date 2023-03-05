@@ -52,6 +52,7 @@
             this.ADD.TabIndex = 0;
             this.ADD.Text = "button1";
             this.ADD.UseVisualStyleBackColor = true;
+            this.ADD.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -62,6 +63,7 @@
             this.button2.Size = new System.Drawing.Size(53, 48);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -71,6 +73,7 @@
             this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Item Name :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -80,6 +83,7 @@
             this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Item Id :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -89,6 +93,7 @@
             this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Quantity :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -98,6 +103,7 @@
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Rate :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -107,6 +113,7 @@
             this.label5.Size = new System.Drawing.Size(88, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "Add Products";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox1
             // 
@@ -114,6 +121,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -138,9 +146,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(622, 62);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(23, 148);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(777, 519);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -149,18 +159,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1317, 763);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ADD);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.ADD);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "AddProduct";
             this.Text = "AddProduct";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

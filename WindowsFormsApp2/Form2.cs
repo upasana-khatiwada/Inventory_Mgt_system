@@ -12,6 +12,7 @@ using WindowsFormsApp2;
 namespace WindowsFormsApp2
 
 {
+
     public partial class Form2 : Form
     {
         //SqlCommand cmd  ;
