@@ -97,6 +97,10 @@ namespace WindowsFormsApp2
             textBox2.Text = Convert.ToString(totalQty);
             con.Close();
 
+            
+
+
+
 
 
 
@@ -196,6 +200,63 @@ namespace WindowsFormsApp2
             //LoginForm.ShowDialog();
 
             con.Close();
+
+            Decimal productAdded = Convert.ToDecimal(textBox3.Text);
+
+            SqlDataAdapter ada = new SqlDataAdapter();
+
+            string query2 = "Insert into productOut(product_out) Values(@out)";
+            con.Open();
+
+            SqlCommand cmd1 = new SqlCommand(query2, con);
+            cmd1.Parameters.AddWithValue("@out", productAdded);
+           // cmd1.ExecuteNonQuery();
+            int rowsAdded = cmd1.ExecuteNonQuery();
+            if (rowsAdded > 0)
+            {
+                MessageBox.Show("Product Added!!");
+                this.Hide();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashBoard ProductOut = new DashBoard();
+            ProductOut.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            products ProductOut = new products();
+            ProductOut.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LowStock ProductOut = new LowStock();
+            ProductOut.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllTransactions ProductOut = new AllTransactions();
+            ProductOut.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Setting ProductOut = new Setting();
+            ProductOut.ShowDialog();
         }
     }
 }

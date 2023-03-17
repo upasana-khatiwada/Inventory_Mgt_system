@@ -135,6 +135,46 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashBoard AddProduct = new DashBoard();
+            AddProduct.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            products AddProduct = new products();
+            AddProduct.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LowStock AddProduct = new LowStock();
+            AddProduct.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllTransactions AddProduct = new AllTransactions();
+            AddProduct.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Setting AddProduct = new Setting();
+            AddProduct.ShowDialog();
+        }
     }
 }
 

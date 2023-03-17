@@ -161,7 +161,9 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //this.Hide();
+            Search SearchForm = new Search();
+            SearchForm.ShowDialog();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -177,6 +179,39 @@ namespace WindowsFormsApp2
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashBoard Products = new DashBoard();
+            Products.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LowStock Products = new LowStock();
+            Products.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllTransactions Products = new AllTransactions();
+            Products.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Setting Products = new Setting();
+            Products.ShowDialog();
         }
     }
 }

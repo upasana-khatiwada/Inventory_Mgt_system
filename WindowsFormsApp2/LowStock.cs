@@ -136,6 +136,34 @@ namespace WindowsFormsApp2
             AddProduct AddProductForm = new AddProduct();
             AddProductForm.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashBoard LowStock = new DashBoard();
+            LowStock.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            products LowStock = new products();
+            LowStock.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllTransactions LowStock = new AllTransactions();
+            LowStock.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Setting LowStock = new Setting();
+            LowStock.ShowDialog();
+        }
     }
 }
 

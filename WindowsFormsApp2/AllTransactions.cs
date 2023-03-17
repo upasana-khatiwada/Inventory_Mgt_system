@@ -63,7 +63,7 @@ namespace WindowsFormsApp2
             sda.Fill(dt);
 
             Decimal Product_InHand = 0;
-            Decimal Product_Out = 0;
+           
             for (int i = 0; i < dt.Rows.Count; i++)
             {
 
@@ -74,10 +74,87 @@ namespace WindowsFormsApp2
 
 
             }
-            //textbox1 left(total product in)
-            textBox2.Text = Convert.ToString(Product_Out);
+          
             textBox3.Text = Convert.ToString(Product_InHand);
+
+
+
+           
+            con.Close();
+
+            string query2 = "select product_in from transactionHistory1";
+            SqlCommand SqlCmd = new SqlCommand(query2, con);
+            SqlDataAdapter ada = new SqlDataAdapter(SqlCmd);
+            DataTable data = new DataTable();
+            ada.Fill(data);
+            Decimal Product_In = 0;
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+
+                string Quantity = data.Rows[i]["product_in"].ToString();
+                Product_In = Product_In + Convert.ToDecimal(Quantity);
+
+
+
+
+            }
+            textBox1.Text = Convert.ToString(Product_In);
+            con.Close();
+
+            string query3 = "select product_out from productOut";
+            SqlCommand Cmd = new SqlCommand(query3, con);
+            SqlDataAdapter sqlada = new SqlDataAdapter(Cmd);
+            DataTable dta = new DataTable();
+            sqlada.Fill(dta);
+            Decimal Product_Out = 0;
+            for (int i = 0; i < dta.Rows.Count; i++)
+            {
+
+                string Quantity = dta.Rows[i]["product_out"].ToString();
+                Product_Out = Product_Out + Convert.ToDecimal(Quantity);
+
+
+
+
+            }
+            textBox2.Text = Convert.ToString(Product_Out);
+
+            con.Close();
+
+
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashBoard AllTransactions = new DashBoard();
+            AllTransactions.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            products AllTransactions = new products();
+            AllTransactions.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LowStock AllTransactions = new LowStock();
+            AllTransactions.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Setting AllTransactions = new Setting();
+            AllTransactions.ShowDialog();
+        }
     }
 }

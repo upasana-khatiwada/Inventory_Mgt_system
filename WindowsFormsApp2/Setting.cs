@@ -16,13 +16,13 @@ namespace WindowsFormsApp2
         public Setting()
         {
             InitializeComponent();
-            button1.BackColor = System.Drawing.Color.Transparent;
-            button1.Parent = pictureBox1;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
+
+            button2.BackColor = System.Drawing.Color.Transparent;
+            button2.Parent = pictureBox1;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +39,34 @@ namespace WindowsFormsApp2
         {
             this.Hide();
             Form3 Setting = new Form3();
+            Setting.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashBoard Setting = new DashBoard();
+            Setting.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            products Setting = new products();
+            Setting.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LowStock Setting = new LowStock();
+            Setting.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllTransactions Setting = new AllTransactions();
             Setting.ShowDialog();
         }
     }

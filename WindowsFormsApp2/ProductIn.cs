@@ -70,6 +70,7 @@ namespace WindowsFormsApp2
 
             //to fetch the total available stock of the selected item---------------------------------------------------------
             string query1 = "select item_name quantity from productlist";
+            SqlCommand Command = new SqlCommand(query1, con);
             Decimal totalQty = 0;
 
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -153,16 +154,125 @@ namespace WindowsFormsApp2
             SqlCommand.ExecuteNonQuery();
             MessageBox.Show("Product Added!!");
 
+            string query2 = "select quantity,category from productlist";
+            SqlCommand cmd = new SqlCommand(query2, con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
 
-            //this.Hide(); //hides the first form 
-            //DashBoard LoginForm = new DashBoard();
-            //LoginForm.ShowDialog();
+            Decimal Product_InHand = 0;
+            //Decimal Product_Out = 0;
+            //Decimal Product_In = 0;
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
 
-            //this.Hide(); //hides the first form 
-            //productInBill LoginForm = new productInBill();
-            //LoginForm.ShowDialog();
+                string Quantity = dt.Rows[i]["Quantity"].ToString();
+                Product_InHand = Product_InHand + Convert.ToDecimal(Quantity);
+
+            }
+            con.Close();
+           /* textBox1.Text = Convert.ToString(Product_In);
+            textBox2.Text = Convert.ToString(Product_Out);*/
+           string productInHand = Convert.ToString(Product_InHand);
+
+            Decimal productAdded =Convert.ToDecimal(productInHand )+ Convert.ToDecimal(textBox3.Text);
+
+
+            SqlDataAdapter ada = new SqlDataAdapter();
+
+            string query3 = "INSERT INTO transactionHistory1(product_in) VALUES(@in)";
+            con.Open();
+
+            // Prepare the command to be executed on the db
+            SqlCommand cmd1 = new SqlCommand(query3, con);
+
+                // Create and set the parameters values 
+                // cmd1.Parameters.Add("@inme", SqlDbType.NVarChar).Value = productAdded;
+               cmd1.Parameters.AddWithValue("@in", productAdded);
+            //cmd1.ExecuteNonQuery();
+            //cmd1.Parameters.Add("@id", SqlDbType.NVarChar).Value = textBox2.Text;
+
+            //cmd1.Parameters.Add("@qty", SqlDbType.NVarChar).Value = textBox3.Text;
+            //cmd1.Parameters.Add("@cat", SqlDbType.NVarChar).Value = textBox4.Text;
+
+            // Let's ask the db to execute the query
+            int rowsAdded = cmd1.ExecuteNonQuery();
+            if (rowsAdded > 0)
+            {
+                MessageBox.Show("Product Added!!");
+                this.Hide(); //hides the first form 
+                //products LoginForm = new products();
+                //LoginForm.ShowDialog();
+            }
+
+
+            else
+            {
+                // Well this should never really happen
+                MessageBox.Show("No Product Added");
+            }
+
 
             con.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashBoard ProductIn = new DashBoard();
+            ProductIn.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            products ProductIn = new products();
+            ProductIn.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LowStock ProductIn = new LowStock();
+            ProductIn.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllTransactions ProductIn = new AllTransactions();
+            ProductIn.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Setting ProductIn = new Setting();
+            ProductIn.ShowDialog();
+        }
     }
-}
+    }
+    
+
+        //  string qu = "Select product_in from transactionHistory";
+        // Decimal addedProduct = 0;
+        // SqlCommand cmd = new SqlCommand(qu, con);
+        //   SqlDataAdapter sda = new SqlDataAdapter(cmd);
+        //DataTable dt = new DataTable();
+        // sda.Fill(dt);
+        //Decimal addedProduct = Convert.ToDecimal(textBox3.Text);
+
+        //string query2 = "UPDATE transactionHistory SET product_in = @in";
+        //SqlCommand sqlCommand = new SqlCommand(query2, con);
+        //SqlDataAdapter sda =new SqlDataAdapter(sqlCommand);
+        //sqlCommand.Parameters.AddWithValue("@in",addedProduct);
+        //SqlCommand.ExecuteNonQuery();
+        //MessageBox.Show("Product Added!!");
+
+
+
+        //con.Close();
+
+
+
+    

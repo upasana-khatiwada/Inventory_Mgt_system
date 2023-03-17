@@ -51,9 +51,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.MediumPurple;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(532, 652);
+            this.button1.Location = new System.Drawing.Point(436, 575);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 53);
             this.button1.TabIndex = 0;
@@ -65,7 +65,7 @@
             // 
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(21, 24);
+            this.button2.Location = new System.Drawing.Point(127, 74);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 48);
             this.button2.TabIndex = 1;
@@ -75,9 +75,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(-49, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1283, 768);
+            this.pictureBox1.Size = new System.Drawing.Size(1197, 735);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -86,7 +86,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(462, 332);
+            this.pictureBox2.Location = new System.Drawing.Point(383, 314);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,9 +96,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(458, 238);
+            this.pictureBox3.Location = new System.Drawing.Point(379, 234);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(52, 38);
+            this.pictureBox3.Size = new System.Drawing.Size(52, 43);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -106,7 +106,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(462, 424);
+            this.pictureBox4.Location = new System.Drawing.Point(383, 394);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(49, 43);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,20 +116,20 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(458, 532);
+            this.pictureBox5.Location = new System.Drawing.Point(383, 478);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(52, 38);
+            this.pictureBox5.Size = new System.Drawing.Size(46, 38);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxUsername.Location = new System.Drawing.Point(532, 238);
+            this.textBoxUsername.Location = new System.Drawing.Point(467, 234);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(252, 38);
+            this.textBoxUsername.Size = new System.Drawing.Size(255, 43);
             this.textBoxUsername.TabIndex = 7;
             this.textBoxUsername.Text = "Username";
             this.textBoxUsername.Enter += new System.EventHandler(this.textBoxUsername_Enter);
@@ -137,11 +137,11 @@
             // 
             // textBoxContactNumber
             // 
-            this.textBoxContactNumber.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxContactNumber.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxContactNumber.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxContactNumber.Location = new System.Drawing.Point(532, 332);
+            this.textBoxContactNumber.Location = new System.Drawing.Point(470, 314);
             this.textBoxContactNumber.Name = "textBoxContactNumber";
-            this.textBoxContactNumber.Size = new System.Drawing.Size(252, 38);
+            this.textBoxContactNumber.Size = new System.Drawing.Size(252, 43);
             this.textBoxContactNumber.TabIndex = 8;
             this.textBoxContactNumber.Text = "Contact Number";
             this.textBoxContactNumber.Enter += new System.EventHandler(this.textBoxContactNumber_Enter);
@@ -149,11 +149,11 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxPassword.Location = new System.Drawing.Point(532, 429);
+            this.textBoxPassword.Location = new System.Drawing.Point(470, 394);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(252, 38);
+            this.textBoxPassword.Size = new System.Drawing.Size(252, 43);
             this.textBoxPassword.TabIndex = 9;
             this.textBoxPassword.Text = "Password";
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
@@ -162,11 +162,11 @@
             // 
             // textBoxConfirmPassword
             // 
-            this.textBoxConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxConfirmPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBoxConfirmPassword.Location = new System.Drawing.Point(532, 532);
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(470, 478);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
-            this.textBoxConfirmPassword.Size = new System.Drawing.Size(252, 38);
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(252, 43);
             this.textBoxConfirmPassword.TabIndex = 10;
             this.textBoxConfirmPassword.Text = "Confirm Password";
             this.textBoxConfirmPassword.TextChanged += new System.EventHandler(this.textBoxConfirmPassword_TextChanged);
@@ -176,11 +176,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(500, 90);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumPurple;
+            this.label1.Location = new System.Drawing.Point(378, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 50);
+            this.label1.Size = new System.Drawing.Size(344, 62);
             this.label1.TabIndex = 11;
             this.label1.Text = "SIGN UP PAGE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
